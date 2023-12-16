@@ -1,0 +1,361 @@
+/* Импорт шрифта Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Переменные цветов */
+:root {
+  --primary-color: #000000;
+}
+
+/* Обнуление отступов и полей, установка шрифта для всего документа */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Стили для основного контейнера body */
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 1000px;
+  padding: 50px;
+  background: var(--primary-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://i.ibb.co/SfBX9r7/file.webp");
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease;
+}
+
+/* Общие стили для изображений */
+img {
+  width: 100%;
+}
+
+/* Стили для обертки страницы */
+.wrapper {
+  display: flex;
+  width: 1200px;
+  min-width: 900px;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+/* Стили для боковой панели */
+.sidebar {
+  width: 30%;
+  min-width: 250px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.815);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Стили для поисковой формы */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Стили для ввода поиска */
+.search input {
+  width: 100%;
+  height: 40px;
+  border: 0px solid #ced4da;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #495057;
+}
+
+/* Стили для кнопки поиска */
+.search input:focus {
+  outline: none;
+  border: 0px solid var(--primary-color);
+}
+
+/* Стили для выпадающего списка результатов поиска */
+.search button {
+  min-width: 40px;
+  height: 40px;
+  border: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Стили для списка результатов поиска */
+.search ul {
+  max-height: 300px;
+  overflow-y: auto;
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  border-radius: 0px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Стили для элемента списка результатов поиска */
+.search ul li {
+  padding: 10px 15px;
+  border-bottom: 0px solid #f1f1f1;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+/* Стили для последнего элемента списка результатов поиска */
+.search ul li:last-child {
+  border-bottom: none;
+}
+
+/* Стили для выделения элемента списка результатов поиска при наведении */
+.search ul li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Стили для активного элемента списка результатов поиска */
+.search ul li.active {
+  background-color: #f1f1f1;
+}
+
+/* Стили для иконки погоды */
+.weather-icon {
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+/* Стили для изображения погоды */
+.weather-icon #icon {
+  width: 80%;
+  object-fit: cover;
+}
+
+/* Стили для температуры */
+.temperature {
+  display: flex;
+}
+
+/* Стили для числового значения температуры */
+.temperature #temp {
+  font-size: 70px;
+  font-weight: 100;
+  line-height: 1;
+}
+
+/* Стили для единиц измерения температуры */
+.temperature span {
+  font-size: 40px;
+  margin-top: -10px;
+  display: block;
+}
+
+/* Стили для разделителя */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #e9ecef;
+  margin: 20px 0;
+}
+
+/* Стили для условий погоды и осадков */
+.condition-rain {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+/* Стили для блока условий погоды */
+.condition-rain div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Стили для иконок условий погоды */
+.condition-rain div i {
+  width: 20px;
+}
+
+/* Стили для блока местоположения */
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Стили для основного контента страницы */
+.main {
+  width: 100%;
+  min-width: 400px;
+  padding: 20px 40px;
+  background-color: #f6f6f8;
+  position: relative;
+  padding-bottom: 90px;
+}
+
+/* Стили для навигации */
+.main nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Стили для опций навигации */
+.main nav .options {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Стили для кнопок опций навигации */
+.main nav .options button {
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #495057;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+/* Стили для активной кнопки опции навигации */
+.main nav .options button.active {
+  color: var(--primary-color);
+}
+
+/* Стили для кнопок единиц измерения */
+.main nav .units button {
+  width: 40px;
+  height: 40px;
+  border-radius: 0%;
+  color: #1a1a1a;
+  background-color: #fff;
+}
+
+/* Стили для активной кнопки единиц измерения */
+.main nav .units button.active {
+  color: #fff;
+  background-color: #1a1a1a;
+}
+
+/* Стили для блока карт погоды */
+.main .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+/* Стили для карточек погоды */
+.cards .card {
+  width: 100px;
+  height: 130px;
+  border-radius: 0px;
+  color: #1a1a1a;
+  background-color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Стили для заголовка карточек погоды */
+.card h2 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Стили для иконок карточек погоды */
+.card .card-icon {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Стили для температуры в карточках погоды */
+.card .day-temp {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  display: flex;
+}
+
+/* Стили для дополнительной информации */
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+/* Стили для заголовка дополнительной информации */
+.highlights .heading {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Стили для карточек дополнительной информации */
+.card2 {
+  width: 250px;
+  height: 150px;
+  border-radius: 0px;
+  color: #1a1a1a;
+  background-color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стили для заголовка карточек дополнительной информации */
+.card2 .card-heading {
+  color: #c2c2c2;
+}
+
+/* Стили для содержимого карточек дополнительной информации */
+.card2 .content {
+  margin-top: 20px;
+}
+
+/* Стили для первого абзаца содержимого карточек дополнительной информации */
+.card2 .content p:first-child {
+  text-align: center;
+  font-size: 30px;
+}
+
+/* Стили для второго абзаца содержимого карточек дополнительной информации */
+.card2 .content p:nth-child(2) {
+  font-size: 15px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Стили для блока кредитов ...ещё +200 соц. кредитов... */
+.credits {
+  text-align: center;
+  font-size: 12px;
+  color: #c2c2c2;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
